@@ -1,13 +1,31 @@
+import { Text, View, TextInput } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
 
 import { styles } from './styles';
 
-export default function Home() {
+export function Home() {
    return (
       <View style={styles.container}>
-         <Text style={styles.h1}>Nome:</Text>
-         <Text style={styles.p}>Pedro Marques da Silva</Text>
+         <Text style={styles.h1}>
+            Nome do evento
+         </Text>
+         <Text style={styles.p}>
+            Sexta, 4 de Novembro de 2022
+         </Text>
+
+         <TextInput
+            style={styles.input}
+            placeholder='Nome do participante'
+            placeholderTextColor='#6B6B6B'
+         />
+
+         <TextInput
+            style={styles.input}
+            placeholder='Telefone do participante'
+            placeholderTextColor='#6B6B6B'
+            keyboardType='numeric'
+         />
+
          <StatusBar style="light" />
       </View>
    );
