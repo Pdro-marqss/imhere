@@ -1,9 +1,15 @@
-import { Text, View, TextInput } from 'react-native';
+import { Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+
+import { Participant } from '../../components/Participant';
 
 import { styles } from './styles';
 
 export function Home() {
+   function handleParticipantAdd() {
+      console.log('voce clicou no botao')
+   }
+
    return (
       <View style={styles.container}>
          <Text style={styles.h1}>
@@ -13,18 +19,26 @@ export function Home() {
             Sexta, 4 de Novembro de 2022
          </Text>
 
-         <TextInput
-            style={styles.input}
-            placeholder='Nome do participante'
-            placeholderTextColor='#6B6B6B'
-         />
+         <View style={styles.form}>
+            <TextInput
+               style={styles.input}
+               placeholder='Nome do participante'
+               placeholderTextColor='#6B6B6B'
+            />
 
-         <TextInput
-            style={styles.input}
-            placeholder='Telefone do participante'
-            placeholderTextColor='#6B6B6B'
-            keyboardType='numeric'
-         />
+            <TouchableOpacity
+               style={styles.button}
+               onPress={handleParticipantAdd}
+            >
+               <Text style={styles.buttonText}>
+                  +
+               </Text>
+            </TouchableOpacity>
+         </View>
+
+         <Participant />
+         <Participant />
+         <Participant />
 
          <StatusBar style="light" />
       </View>
