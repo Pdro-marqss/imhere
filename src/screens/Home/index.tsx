@@ -1,4 +1,4 @@
-import { Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import { Participant } from '../../components/Participant';
@@ -6,8 +6,14 @@ import { Participant } from '../../components/Participant';
 import { styles } from './styles';
 
 export function Home() {
+   const participants = ['Pedro', 'Monique', 'Mariana', 'Patricia', 'Robson', 'Mila', 'Maju', 'Billy', 'Jarvan IV', 'Jubicleison', 'Robervaul', 'Tsushiro kimimame'];
+
    function handleParticipantAdd() {
       console.log('voce clicou no botao')
+   }
+
+   function handleParticipantRemove(name: string) {
+      console.log(`${name} foi removido`);
    }
 
    return (
@@ -36,9 +42,17 @@ export function Home() {
             </TouchableOpacity>
          </View>
 
-         <Participant />
-         <Participant />
-         <Participant />
+         <ScrollView showsVerticalScrollIndicator={false}>
+            {
+               participants.map((participant) => (
+                  <Participant
+                     name={participant}
+                     key={participant}
+                     onRemove={() => handleParticipantRemove(participant)}
+                  />
+               ))
+            }
+         </ScrollView>
 
          <StatusBar style="light" />
       </View>
