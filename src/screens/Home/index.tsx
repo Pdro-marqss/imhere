@@ -1,4 +1,4 @@
-import { Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
+import { Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import { Participant } from '../../components/Participant';
@@ -42,17 +42,23 @@ export function Home() {
             </TouchableOpacity>
          </View>
 
-         <ScrollView showsVerticalScrollIndicator={false}>
-            {
-               participants.map((participant) => (
-                  <Participant
-                     name={participant}
-                     key={participant}
-                     onRemove={() => handleParticipantRemove(participant)}
-                  />
-               ))
-            }
-         </ScrollView>
+         <FlatList
+            data={participants}
+            keyExtractor={item => item}
+            renderItem={({ item }) => (
+               <Participant
+                  name={item}
+                  key={item}
+                  onRemove={() => handleParticipantRemove(item)}
+               />
+            )}
+            showsVerticalScrollIndicator={false}
+            ListEmptyComponent={() => (
+               <Text style={styles.listEmptyText}>
+                  Lista vazia. Acho que ninguém chegou ainda 🐒
+               </Text>
+            )}
+         />
 
          <StatusBar style="light" />
       </View>
