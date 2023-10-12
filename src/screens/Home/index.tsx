@@ -1,18 +1,33 @@
-import { Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
+import { Text, View, TextInput, TouchableOpacity, FlatList, Alert } from 'react-native';
 
 import { Participant } from '../../components/Participant';
 
 import { styles } from './styles';
 
 export function Home() {
-   const participants = ['Pedro', 'Monique', 'Mariana', 'Patricia', 'Robson', 'Mila', 'Maju', 'Billy', 'Jarvan IV', 'Jubicleison', 'Robervaul', 'Tsushiro kimimame'];
+   const [participants, setParticipants] = useState<string[]>(['Pedro', 'Monique', 'Mariana', 'Patricia', 'Robson', 'Mila', 'Maju', 'Billy', 'Jarvan IV', 'Jubicleison', 'Robervaul', 'Tsushiro kimimame']);
+   // const participants = ['Pedro', 'Monique', 'Mariana', 'Patricia', 'Robson', 'Mila', 'Maju', 'Billy', 'Jarvan IV', 'Jubicleison', 'Robervaul', 'Tsushiro kimimame'];
 
-   function handleParticipantAdd() {
+   function handleParticipantAdd(name: string) {
+      if (participants.includes(name)) {
+         return Alert.alert('Alerta que eu fiz', 'Esse participante ja existe');
+      }
       console.log('voce clicou no botao')
    }
 
    function handleParticipantRemove(name: string) {
+      Alert.alert('Remover', `Deseja mesmo remover ${name} da lista ?`, [
+         {
+            text: 'Sim',
+            onPress: () => Alert.alert('Deletado'),
+         },
+         {
+            text: 'Não',
+            style: 'cancel'
+         }
+      ]);
+
       console.log(`${name} foi removido`);
    }
 
@@ -34,7 +49,7 @@ export function Home() {
 
             <TouchableOpacity
                style={styles.button}
-               onPress={handleParticipantAdd}
+               onPress={() => handleParticipantAdd('Pedro')}
             >
                <Text style={styles.buttonText}>
                   +
@@ -59,8 +74,6 @@ export function Home() {
                </Text>
             )}
          />
-
-         <StatusBar style="light" />
       </View>
    );
 }
