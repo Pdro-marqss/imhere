@@ -6,14 +6,14 @@ import { Participant } from '../../components/Participant';
 import { styles } from './styles';
 
 export function Home() {
-   const [participants, setParticipants] = useState<string[]>(['Pedro', 'Monique', 'Mariana', 'Patricia', 'Robson', 'Mila', 'Maju', 'Billy', 'Jarvan IV', 'Jubicleison', 'Robervaul', 'Tsushiro kimimame']);
-   // const participants = ['Pedro', 'Monique', 'Mariana', 'Patricia', 'Robson', 'Mila', 'Maju', 'Billy', 'Jarvan IV', 'Jubicleison', 'Robervaul', 'Tsushiro kimimame'];
+   const [participants, setParticipants] = useState<string[]>([]);
 
    function handleParticipantAdd(name: string) {
       if (participants.includes(name)) {
-         return Alert.alert('Alerta que eu fiz', 'Esse participante ja existe');
+         return Alert.alert('Ops...', 'Esse participante ja existe');
       }
-      console.log('voce clicou no botao')
+
+      setParticipants((state) => [...state, name]);
    }
 
    function handleParticipantRemove(name: string) {
