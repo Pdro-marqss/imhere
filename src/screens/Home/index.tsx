@@ -7,20 +7,22 @@ import { styles } from './styles';
 
 export function Home() {
    const [participants, setParticipants] = useState<string[]>([]);
+   const [participantName, setParticipantName] = useState('');
 
-   function handleParticipantAdd(name: string) {
-      if (participants.includes(name)) {
+   function handleParticipantAdd() {
+      if (participants.includes(participantName)) {
          return Alert.alert('Ops...', 'Esse participante ja existe');
       }
 
-      setParticipants((state) => [...state, name]);
+      setParticipants((state) => [...state, participantName]);
+      setParticipantName('');
    }
 
    function handleParticipantRemove(name: string) {
       Alert.alert('Remover', `Deseja mesmo remover ${name} da lista ?`, [
          {
             text: 'Sim',
-            onPress: () => Alert.alert('Deletado'),
+            onPress: () => setParticipants((state) => state.filter((participant) => participant !== name)),
          },
          {
             text: 'Não',
@@ -45,11 +47,13 @@ export function Home() {
                style={styles.input}
                placeholder='Nome do participante'
                placeholderTextColor='#6B6B6B'
+               onChangeText={setParticipantName} //onChangeText nao precisa usar função anonima ((text) => setParticipantName(text))
+               value={participantName}
             />
 
             <TouchableOpacity
                style={styles.button}
-               onPress={() => handleParticipantAdd('Pedro')}
+               onPress={() => handleParticipantAdd()}
             >
                <Text style={styles.buttonText}>
                   +
