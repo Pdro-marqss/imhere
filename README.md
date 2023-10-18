@@ -10,9 +10,9 @@
 </p>
 
 <div style="">
-   <img style="width: 400px;" title="#imhere" src="./.github/empty-list.jpg" alt="" />
-   <img title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
-   <img title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
+   <img style="width: 300px;" title="#imhere" src="./.github/empty-list.jpg" alt="" />
+   <img style="width: 300px;" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
+   <img style="width: 300px;" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
 </div>
 
 <!-- <div align="center"> 
