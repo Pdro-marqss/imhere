@@ -9,10 +9,10 @@
   <a href="#tech-stack">Techs used</a>
 </p>
 
-<div align="center" style="display: flex; gap: 8px;">
+<div align="center" style="display: flex; gap: 12px;">
    <img style="width: 240px;" title="#imhere" src="./.github/empty-list.jpg" alt="" />
    <img style="width: 240px;" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
-   <img style="width: 240px;" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
+   <img style="width: 240px;" title="#imhere" src="./.github/removing-item.jpg" alt="" />
 </div>
 
 <!-- <div align="center"> 
