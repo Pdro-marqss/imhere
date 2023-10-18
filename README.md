@@ -15,24 +15,9 @@
    <img style="width: 240px;" title="#imhere" src="./.github/removing-item.jpg" alt="" />
 </div>
 
-<!-- <div align="center"> 
-
-	<img title="#imhere" src="./.github/empty-list.jpg" alt="" />
-</div>
-
-<div align="center"> 
-	<img title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
-</div>
-
-<br>
-
-<div align="center"> 
-	<img title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
-</div> -->
-
 ## About
 
-Ignite-timer is a tool to apply the pomodoro technique with history of past activities.
+ImHere is a mobile app to create event lists and manage participants.
 
 This project was developed during the Ignite Course from [Rocketseat](https://www.rocketseat.com.br/ignite).
 
@@ -40,32 +25,33 @@ This project was developed during the Ignite Course from [Rocketseat](https://ww
 
 ## Features
 
-- [x] Create a timer to apply the pomodoro technique
-- [x] Interrupt timer any time
-- [ ] History with past timers and their status
-- [ ] Persist data in local storage
+- [x] Creates a list of participants for an event
+- [x] Add Participants
+- [x] Remove Participants
 
 ---
 
 ## How to run the application
 
-You will need to have [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/) installed to run the project:
+You will need to have [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) and [Expo](https://expo.dev) (in your phone, otherwise need some phone emulator like adroid studio) installed to run the project:
 
 #### Running the app
 
 ```bash
 
 # Clone this repository
-$ git clone https://github.com/Pdro-marqss/ignite-timer.git
+$ git clone https://github.com/Pdro-marqss/imhere.git
 
 # Access the project folder in your terminal
-$ cd ignite-timer
+$ cd imhere
 
 # Install the dependencies
 $ npm install
 
-# Run the application in development mode
-$ npm run dev
+# Run the application in development mode using expo
+$ npx expo start
+
+#Use Expo Go to run the app in your phone
 
 ```
 
@@ -75,15 +61,9 @@ $ npm run dev
 
 Tools used in the construction of this project:
 
-- **[React](https://reactjs.org/)**
-- **[Vite](https://vitejs.dev/)**
+- **[React-Native](https://reactnative.dev)**
+- **[Expo](https://expo.dev)**
 - **[Typescript](https://www.typescriptlang.org/)**
-- **[React Router](https://v5.reactrouter.com/web/guides/quick-start)**
 - **[Styled Components](https://styled-components.com/)**
-- **[React Hook Form](https://react-hook-form.com/)**
-- **[PhosphorIcons](https://phosphoricons.com/)**
-- **[Zod](https://zod.dev/)**
-- **[date-fns](https://date-fns.org/)**
-<!-- - **[Immer](https://immerjs.github.io/immer/)** -->
 
 ---
