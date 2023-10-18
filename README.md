@@ -25,7 +25,7 @@ This project was developed during the Ignite Course from [Rocketseat](https://ww
 
 ## Features
 
-- [x] Creates a list of participants for an event
+- [X] Creates a list of participants for an event
 - [x] Add Participants
 - [x] Remove Participants
 
