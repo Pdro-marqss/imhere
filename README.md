@@ -9,7 +9,7 @@
   <a href="#tech-stack">Techs used</a>
 </p>
 
-<div style="">
+<div style="display: flex; align-itens: center; gap: 5px;">
    <img style="width: 300px;" title="#imhere" src="./.github/empty-list.jpg" alt="" />
    <img style="width: 300px;" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
    <img style="width: 300px;" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
