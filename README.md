@@ -10,9 +10,9 @@
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 8px">
-   <img style="width: 100%" title="#imhere" src="./.github/empty-list.jpg" alt="" />
-   <img style="width: 100%" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
-   <img style="width: 100%" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
+   <img style="width: 100%; height: 100%; object-fit: cover;" title="#imhere" src="./.github/empty-list.jpg" alt="" />
+   <img style="width: 100%; height: 100%; object-fit: cover;" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
+   <img style="width: 100%; height: 100%; object-fit: cover;" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
 </div>
 
 <!-- <div align="center"> 
