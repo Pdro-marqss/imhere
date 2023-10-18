@@ -29,17 +29,15 @@ export function Home() {
             style: 'cancel'
          }
       ]);
-
-      console.log(`${name} foi removido`);
    }
 
    return (
       <View style={styles.container}>
          <Text style={styles.h1}>
-            Nome do evento
+            Campeonato de CS2
          </Text>
          <Text style={styles.p}>
-            Sexta, 4 de Novembro de 2022
+            Sexta, 8 de Setembro de 2023
          </Text>
 
          <View style={styles.form}>
