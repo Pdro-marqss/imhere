@@ -10,12 +10,13 @@
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 8px">
-   <img title="#imhere" src="./.github/empty-list.jpg" alt="" />
-   <img title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
-   <img title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
+   <img style="width: 100%" title="#imhere" src="./.github/empty-list.jpg" alt="" />
+   <img style="width: 100%" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
+   <img style="width: 100%" title="#imhere" src="./.github/itens-in-list.jpg" alt="" />
 </div>
 
 <!-- <div align="center"> 
+
 	<img title="#imhere" src="./.github/empty-list.jpg" alt="" />
 </div>
 
