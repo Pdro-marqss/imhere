@@ -64,6 +64,5 @@ Tools used in the construction of this project:
 - **[React-Native](https://reactnative.dev)**
 - **[Expo](https://expo.dev)**
 - **[Typescript](https://www.typescriptlang.org/)**
-- **[Styled Components](https://styled-components.com/)**
 
 ---
